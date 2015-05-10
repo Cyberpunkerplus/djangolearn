@@ -9,4 +9,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^index/$','article.views.home'),
+    url(r'^(?P<my_args>\d+)/$','article.views.detail',name='detail'),
 )
